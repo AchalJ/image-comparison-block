@@ -83,7 +83,7 @@ function ideabox_image_comparison_block_init() {
         true
     );
 
-	register_block_type( 'ib-image-comparison/image-comparison', array(
+	register_block_type( 'ideabox/image-comparison', array(
 		'editor_script' => 'ideabox-image-comparison-block-editor',
 		'editor_style'  => 'ideabox-image-comparison-block-editor',
 		'style'         => 'ideabox-image-comparison-block',
