@@ -31,7 +31,10 @@ const ImageControl = ( props ) => {
 							onClick={ open }
 						>
 							{ ! id ? (
-								image
+								<>
+								<div className="ib-image-placeholder">{ image }</div>
+								<div className="ib-image-placeholder-text">{ __( 'Click to Choose or Upload', 'ib-image-comparison' ) }</div>
+								</>
 							) : (
 								<img
 									className="ib-image"

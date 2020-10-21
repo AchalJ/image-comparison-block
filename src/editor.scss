@@ -12,6 +12,9 @@ button[class*="editor-block-list-item-ideabox-"] .block-editor-block-icon svg {
     .ib-block-control__image {
         flex-basis: 49%;
 	}
+	.ib-image-placeholder-text {
+		color: #bdbdbd;
+	}
 	button {
 		height: 400px;
 		width: 49.5%;
