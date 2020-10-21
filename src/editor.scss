@@ -1,0 +1,29 @@
+button[class*="editor-block-list-item-ideabox-"] .block-editor-block-icon svg {
+    fill: #0b55d0;
+    background: none;
+    border-radius: 0;
+}
+
+.ib-image-selector {
+    position: relative;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    .ib-block-control__image {
+        flex-basis: 49%;
+	}
+	button {
+		height: 400px;
+		width: 49.5%;
+		padding: 0 !important;
+		z-index: 1;
+	}
+	svg {
+		fill: #bdbdbd;
+    	width: 60px;
+	}
+	img {
+		height: 100%;
+		object-fit: cover;
+	}
+}

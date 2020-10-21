@@ -1,0 +1,50 @@
+.ib-block-control__color-picker {
+	> .components-base-control__field {
+		margin-bottom: 16px;
+		> .components-base-control__label {
+			display: inline-block;
+		}
+		.ib-block-control__color-picker-reset {
+			height: 20px;
+			vertical-align: top;
+			padding: 0 5px;
+			margin-right: 5px;
+			svg {
+				width: 14px;
+    			height: 14px;
+			}
+		}
+	}
+}
+.ib-block-control__color-picker-dropdown {
+	float: right;
+	position: relative;
+	.ib-block-control__color-picker-value {
+		min-width: 50px;
+		height: 20px;
+		margin: 0;
+		border: 2px solid #fff;
+		outline: 1px solid #ddd;
+		background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAAHnlligAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAHJJREFUeNpi+P///4EDBxiAGMgCCCAGFB5AADGCRBgYDh48CCRZIJS9vT2QBAggFBkmBiSAogxFBiCAoHogAKIKAlBUYTELAiAmEtABEECk20G6BOmuIl0CIMBQ/IEMkO0myiSSraaaBhZcbkUOs0HuBwDplz5uFJ3Z4gAAAABJRU5ErkJggg==");
+		background-size: 10px;
+		position: relative;
+		box-shadow: none !important;
+		&:focus {
+			outline: 1px solid #6c7781 !important;
+			outline-offset: unset;
+		}
+		span {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+}
+
+.ib-block-control__color-picker-inner {
+	.components-notice {
+		margin-bottom: 10px;
+	}
+}

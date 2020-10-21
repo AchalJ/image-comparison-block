@@ -1,0 +1,89 @@
+.twentytwenty-horizontal {
+	.ib-image-comparison {
+		.twentytwenty-before-label:before,
+		.twentytwenty-after-label:before {
+			top: 50%;
+			transform: translateY(-50%);
+			margin-top: 0;
+		}
+		&.label-pos--top {
+			.twentytwenty-before-label:before,
+			.twentytwenty-after-label:before {
+				transform: translateY(0);
+				top: 10px;
+			}
+		}
+		&.label-pos--bottom {
+			.twentytwenty-before-label:before,
+			.twentytwenty-after-label:before {
+				bottom: 10px;
+				transform: translateY(0);
+				top: auto;
+			}
+		}
+	}
+}
+.twentytwenty-vertical {
+	.ib-image-comparison {
+		.twentytwenty-before-label:before,
+		.twentytwenty-after-label:before {
+			left: 50%;
+			transform: translateX(-50%);
+			text-align: center;
+			margin-left: 0;
+		}
+		&.label-pos--left {
+			.twentytwenty-before-label:before,
+			.twentytwenty-after-label:before {
+				left: 10px;
+				transform: translateX(0);
+			}
+		}
+		&.label-pos--right {
+			.twentytwenty-before-label:before,
+			.twentytwenty-after-label:before {
+				left: auto;
+				right: 10px;
+				transform: translateX(0);
+			}
+		}
+	}
+}
+.ib-image-comparison {
+	.twentytwenty-before-label:before,
+	.twentytwenty-after-label:before {
+		color: var(--ibic-label-color, #ffffff);
+		background-color: var(--ibic-label-bg-color, rgba(255,255,255,0.2));
+		font-size: var(--ibic-label-size, 13px);
+		border: var(--ibic-label-border, 0px) solid;
+		width: auto;
+	}
+
+	.twentytwenty-handle {
+		background: #fff;
+		border: 2px solid #fff;
+		.twentytwenty-left-arrow,
+		&:hover .twentytwenty-left-arrow {
+			border-right-color: #333;
+		}
+		.twentytwenty-right-arrow,
+		&:hover .twentytwenty-right-arrow {
+			border-left-color: #333;
+		}
+		.twentytwenty-down-arrow,
+		&:hover .twentytwenty-down-arrow {
+			border-top-color: #333;
+		}
+		.twentytwenty-up-arrow,
+		&:hover .twentytwenty-up-arrow {
+			border-bottom-color: #333;
+		}
+	}
+
+	.twentytwenty-overlay {
+		background: var(--ibic-overlay-color, rgba(0,0,0,0));
+		&:hover {
+			background: var(--ibic-overlay-hover-color, rgba(0,0,0,0.5));
+		}
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"name": "image-comparison",
+	"version": "1.0.0",
+	"description": "A block to let your visitors compare between two images. After, before, horizontal, and vertical comparison.",
+	"author": "Achal Jain",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build --config webpack.config.js",
+		"format:js": "wp-scripts format-js",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"start": "wp-scripts start",
+		"packages-update": "wp-scripts packages-update"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^12.2.0",
+		"@wordpress/icons": "^2.6.0"
+	}
+}
