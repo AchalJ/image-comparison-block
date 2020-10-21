@@ -1,6 +1,7 @@
 <?php
 /**
  * Plugin Name:     Image Comparison Block
+ * Plugin URI:      https://wordpress.org/plugins/image-comparison-block/
  * Description:     A block to let your visitors compare between two images. After, before, horizontal, and vertical comparison.
  * Version:         1.0.0
  * Author:          Achal Jain
