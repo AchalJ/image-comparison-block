@@ -1,0 +1,18 @@
+
+name: Plugin updates
+on:
+  push:
+    branches:
+    - updates
+jobs:
+  updates:
+    name: Update
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: WordPress Plugin Update
+      uses: 10up/action-wordpress-plugin-deploy@master
+      env:
+        SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+        SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+        SLUG: image-comparison-block
