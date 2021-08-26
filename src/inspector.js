@@ -48,7 +48,7 @@ const Inspector = ( props ) => {
 		<InspectorControls>
 			<PanelBody title={ __( 'Image Comparison Settings', 'ib-image-comparison' ) }>
 				<RangeControl
-					label={ __( 'Visibility Ratio', 'ib-image-comparison' ) }
+					label={ __( 'Visibility ratio', 'ib-image-comparison' ) }
 					value={ visibleRatio }
 					onChange={ ( visibleRatio ) =>
 						setAttributes( { visibleRatio } )
@@ -69,7 +69,7 @@ const Inspector = ( props ) => {
 					value={ orientation }
 				/>
 				<SelectControl
-					label={ __( 'Move Handle', 'ib-image-comparison' ) }
+					label={ __( 'Move handle', 'ib-image-comparison' ) }
 					options={ [
 						{ value: 'on_swipe', label: 'On Swipe' },
 						{ value: 'on_click', label: 'On Click' },
@@ -82,7 +82,7 @@ const Inspector = ( props ) => {
 					help={ getMoveHandleHelp() }
 				/>
 				<ToggleControl
-					label={ __( 'Show Overlay', 'ib-image-comparison' ) }
+					label={ __( 'Show overlay', 'ib-image-comparison' ) }
 					checked={ showOverlay }
 					onChange={ ( showOverlay ) =>
 						setAttributes( { showOverlay } )
@@ -92,7 +92,7 @@ const Inspector = ( props ) => {
 			{ showOverlay && 
 			<PanelBody title={ __( 'Overlay Colors', 'ib-image-comparison' ) } initialOpen={ false }>
 				<ColorPickerControl
-					label={ __( 'Overlay Color', 'ib-image-comparison' ) }
+					label={ __( 'Overlay color', 'ib-image-comparison' ) }
 					value={ overlayColor }
 					onChange={ ( overlayColor ) =>
 						setAttributes( { overlayColor } )
@@ -100,7 +100,7 @@ const Inspector = ( props ) => {
 					disablePalette
 				/>
 				<ColorPickerControl
-					label={ __( 'Overlay Hover Color', 'ib-image-comparison' ) }
+					label={ __( 'Overlay hover color', 'ib-image-comparison' ) }
 					value={ overlayHoverColor }
 					onChange={ ( overlayHoverColor ) =>
 						setAttributes( { overlayHoverColor } )
@@ -112,7 +112,7 @@ const Inspector = ( props ) => {
 			{ showOverlay && 
 				<PanelBody title={ __( 'Labels', 'ib-image-comparison' ) } initialOpen={ false }>
 					<TextControl
-						label={ __( 'Before Label', 'ib-image-comparison' ) }
+						label={ __( 'Before label', 'ib-image-comparison' ) }
 						onChange={ ( beforeLabel ) =>
 							setAttributes( { beforeLabel } )
 						}
@@ -120,7 +120,7 @@ const Inspector = ( props ) => {
 					/>
 					
 					<TextControl
-						label={ __( 'After Label', 'ib-image-comparison' ) }
+						label={ __( 'After label', 'ib-image-comparison' ) }
 						onChange={ ( afterLabel ) =>
 							setAttributes( { afterLabel } )
 						}
@@ -160,7 +160,7 @@ const Inspector = ( props ) => {
 					<hr />
 
 					<ColorPickerControl
-						label={ __( 'Text Color', 'ib-image-comparison' ) }
+						label={ __( 'Text color', 'ib-image-comparison' ) }
 						value={ labelColor }
 						onChange={ ( labelColor ) =>
 							setAttributes( { labelColor } )
@@ -170,7 +170,7 @@ const Inspector = ( props ) => {
 					/>
 
 					<ColorPickerControl
-						label={ __( 'Background Color', 'ib-image-comparison' ) }
+						label={ __( 'Background color', 'ib-image-comparison' ) }
 						value={ labelBgColor }
 						onChange={ ( labelBgColor ) =>
 							setAttributes( { labelBgColor } )
