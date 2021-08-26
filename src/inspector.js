@@ -90,24 +90,28 @@ const Inspector = ( props ) => {
 						setAttributes( { showOverlay } )
 					}
 				/>
-				<ColorPickerControl
-					label={ __( 'Overlay Color', 'ib-image-comparison' ) }
-					value={ overlayColor }
-					onChange={ ( overlayColor ) =>
-						setAttributes( { overlayColor } )
-					}
-					disablePalette
-				/>
-				<ColorPickerControl
-					label={ __( 'Overlay Hover Color', 'ib-image-comparison' ) }
-					value={ overlayHoverColor }
-					onChange={ ( overlayHoverColor ) =>
-						setAttributes( { overlayHoverColor } )
-					}
-					disablePalette
-				/>
+				{ showOverlay && 
+					<>
+						<ColorPickerControl
+							label={ __( 'Overlay Color', 'ib-image-comparison' ) }
+							value={ overlayColor }
+							onChange={ ( overlayColor ) =>
+								setAttributes( { overlayColor } )
+							}
+							disablePalette
+						/>
+						<ColorPickerControl
+							label={ __( 'Overlay Hover Color', 'ib-image-comparison' ) }
+							value={ overlayHoverColor }
+							onChange={ ( overlayHoverColor ) =>
+								setAttributes( { overlayHoverColor } )
+							}
+							disablePalette
+						/>
+					</>
+				}
 			</PanelBody>
-			{  ( showOverlay && 
+			{ showOverlay && 
 				<PanelBody title={ __( 'Labels', 'ib-image-comparison' ) } initialOpen={ false }>
 					<TextControl
 						label={ __( 'Before Label', 'ib-image-comparison' ) }
@@ -202,7 +206,7 @@ const Inspector = ( props ) => {
 						/>
 					</BaseControl>
 				</PanelBody>
-			) }
+			}
 		</InspectorControls>
 	);
 };
