@@ -8,17 +8,19 @@ import save from './save';
 import './style.scss';
 import metadata from '../block.json';
 
-const { name, icon, category, keywords, supports } = metadata;
+const { name, category, keywords, supports } = metadata;
 
 registerBlockType( name, {
 	title: __( 'Image Comparison', 'ib-image-comparison' ),
 	description: __(
-		'A block to let your visitors compare between two images. After, before, horizontal, and vertical comparison.',
+		'Compare between two images.',
 		'ib-image-comparison'
 	),
 	keywords,
 	category,
-	icon,
+	icon: (
+		<svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="m10.5 2.25c0-.41421.3358-.75.75-.75s.75.33579.75.75v.75.75.09375.65625 15 .625.125.75.75c0 .4142-.3358.75-.75.75s-.75-.3358-.75-.75v-.75h-5.5c-1.10457 0-2-.8954-2-2v-14c0-1.10457.89543-2 2-2h5.5zm.0008 13.5156c0 .1381-.1119.25-.25.25h-4.38595c-.15943.0001-.3158-.0539-.45197-.1559-.13618-.1021-.2469-.2484-.32003-.4228s-.10586-.3702-.09458-.566c.01127-.1958.06611-.384.1585-.544l.81719-1.4146 1.08885-1.8806c.08026-.1391.18643-.2526.30962-.331.12319-.0783.25982-.1192.39846-.1192.13865 0 .27528.0409.39847.1192.12314.0783.24473.1556.30962.331l.37258 1.3378.34375 1.0741.89669-.7377c.1631-.1342.4088-.0181.4088.1931zm3.2492.6669c-.1381 0-.25-.112-.25-.25v-7.15749c0-.01651.0041-.03276.0119-.0473l.0398-.07412c.0668-.12485.1548-.22659.2569-.29678s.2152-.10681.33-.10681c.1147 0 .2278.03662.3299.10681s.1902.17193.2569.29678l1.7127 3.20901 1.4912 2.7993c.0766.144.1221.3135.1314.4898s-.0178.3526-.0784.5097c-.0606.157-.1524.2887-.2652.3806-.1129.092-.2425.1405-.3747.1405zm5.25 3.0675h-5.25c-.1381 0-.25.1119-.25.25v1c0 .1381.1119.25.25.25h5.25c1.1046 0 2-.8954 2-2v-14c0-1.10457-.8954-2-2-2h-5.25c-.1381 0-.25.11193-.25.25v1c0 .13807.1119.25.25.25h5.25c.2761 0 .5.22386.5.5v14c0 .2761-.2239.5-.5.5z" fill="currentColor" fill-rule="evenodd"/></svg>
+	),
 	supports,
 	attributes,
 	edit,

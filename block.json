@@ -2,7 +2,6 @@
 	"name": "ideabox/image-comparison",
 	"title": "Image Comparison",
 	"category": "widgets",
-	"icon": "format-image",
 	"description": "A block to let your visitors compare between two images. After, before, horizontal, and vertical comparison.",
 	"keywords": ["image", "before", "after"],
 	"textdomain": "ib-image-comparison",
