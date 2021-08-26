@@ -81,8 +81,6 @@ const Inspector = ( props ) => {
 					value={ moveSlider }
 					help={ getMoveHandleHelp() }
 				/>
-			</PanelBody>
-			<PanelBody title={ __( 'Overlay', 'ib-image-comparison' ) } initialOpen={ false }>
 				<ToggleControl
 					label={ __( 'Show Overlay', 'ib-image-comparison' ) }
 					checked={ showOverlay }
@@ -90,27 +88,27 @@ const Inspector = ( props ) => {
 						setAttributes( { showOverlay } )
 					}
 				/>
-				{ showOverlay && 
-					<>
-						<ColorPickerControl
-							label={ __( 'Overlay Color', 'ib-image-comparison' ) }
-							value={ overlayColor }
-							onChange={ ( overlayColor ) =>
-								setAttributes( { overlayColor } )
-							}
-							disablePalette
-						/>
-						<ColorPickerControl
-							label={ __( 'Overlay Hover Color', 'ib-image-comparison' ) }
-							value={ overlayHoverColor }
-							onChange={ ( overlayHoverColor ) =>
-								setAttributes( { overlayHoverColor } )
-							}
-							disablePalette
-						/>
-					</>
-				}
 			</PanelBody>
+			{ showOverlay && 
+			<PanelBody title={ __( 'Overlay Colors', 'ib-image-comparison' ) } initialOpen={ false }>
+				<ColorPickerControl
+					label={ __( 'Overlay Color', 'ib-image-comparison' ) }
+					value={ overlayColor }
+					onChange={ ( overlayColor ) =>
+						setAttributes( { overlayColor } )
+					}
+					disablePalette
+				/>
+				<ColorPickerControl
+					label={ __( 'Overlay Hover Color', 'ib-image-comparison' ) }
+					value={ overlayHoverColor }
+					onChange={ ( overlayHoverColor ) =>
+						setAttributes( { overlayHoverColor } )
+					}
+					disablePalette
+				/>
+			</PanelBody>
+			}
 			{ showOverlay && 
 				<PanelBody title={ __( 'Labels', 'ib-image-comparison' ) } initialOpen={ false }>
 					<TextControl
