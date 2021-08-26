@@ -82,6 +82,31 @@ const Inspector = ( props ) => {
 					help={ getMoveHandleHelp() }
 				/>
 			</PanelBody>
+			<PanelBody title={ __( 'Overlay', 'ib-image-comparison' ) } initialOpen={ false }>
+				<ToggleControl
+					label={ __( 'Show Overlay', 'ib-image-comparison' ) }
+					checked={ showOverlay }
+					onChange={ ( showOverlay ) =>
+						setAttributes( { showOverlay } )
+					}
+				/>
+				<ColorPickerControl
+					label={ __( 'Overlay Color', 'ib-image-comparison' ) }
+					value={ overlayColor }
+					onChange={ ( overlayColor ) =>
+						setAttributes( { overlayColor } )
+					}
+					disablePalette
+				/>
+				<ColorPickerControl
+					label={ __( 'Overlay Hover Color', 'ib-image-comparison' ) }
+					value={ overlayHoverColor }
+					onChange={ ( overlayHoverColor ) =>
+						setAttributes( { overlayHoverColor } )
+					}
+					disablePalette
+				/>
+			</PanelBody>
 			<PanelBody title={ __( 'Labels', 'ib-image-comparison' ) } initialOpen={ false }>
 				<TextControl
 					label={ __( 'Before Label', 'ib-image-comparison' ) }
@@ -175,31 +200,6 @@ const Inspector = ( props ) => {
 						}
 					/>
 				</BaseControl>
-			</PanelBody>
-			<PanelBody title={ __( 'Overlay', 'ib-image-comparison' ) } initialOpen={ false }>
-				<ToggleControl
-					label={ __( 'Show Overlay', 'ib-image-comparison' ) }
-					checked={ showOverlay }
-					onChange={ ( showOverlay ) =>
-						setAttributes( { showOverlay } )
-					}
-				/>
-				<ColorPickerControl
-					label={ __( 'Overlay Color', 'ib-image-comparison' ) }
-					value={ overlayColor }
-					onChange={ ( overlayColor ) =>
-						setAttributes( { overlayColor } )
-					}
-					disablePalette
-				/>
-				<ColorPickerControl
-					label={ __( 'Overlay Hover Color', 'ib-image-comparison' ) }
-					value={ overlayHoverColor }
-					onChange={ ( overlayHoverColor ) =>
-						setAttributes( { overlayHoverColor } )
-					}
-					disablePalette
-				/>
 			</PanelBody>
 		</InspectorControls>
 	);
