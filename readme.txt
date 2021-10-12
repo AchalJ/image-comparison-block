@@ -1,8 +1,8 @@
 === Image Comparison Block ===
-Contributors:      ibachal
-Tags:              block, before, after, slider
+Contributors:      ibachal, richtabor
+Tags:              block, before, after, slider, comparison
 Requires at least: 5.3.2
-Tested up to:      5.5.1
+Tested up to:      5.8.1
 Stable tag:        1.0.0
 Requires PHP:      7.0.0
 License:           GPL-2.0-or-later
@@ -36,6 +36,11 @@ To report bugs or to contribute, headover to the [GitHub repository](https://git
 == Screenshots ==
 
 == Changelog ==
+
+= 1.0.1 - October 12, 2021 =
+
+* Updated block and toolbar before/after control icons (props @richtabor)
+* Re-arranged controls in setting panel (props @richtabor)
 
 = 1.0.0 - October 20, 2020 =
 
