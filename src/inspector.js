@@ -46,7 +46,7 @@ const Inspector = ( props ) => {
 
 	return (
 		<InspectorControls>
-			<PanelBody title={ __( 'Image Comparison Settings', 'ib-image-comparison' ) }>
+			<PanelBody title={ __( 'Settings', 'ib-image-comparison' ) }>
 				<RangeControl
 					label={ __( 'Visibility ratio', 'ib-image-comparison' ) }
 					value={ visibleRatio }
