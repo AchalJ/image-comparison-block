@@ -46,9 +46,9 @@ const Inspector = ( props ) => {
 
 	return (
 		<InspectorControls>
-			<PanelBody title={ __( 'Settings', 'ib-image-comparison' ) }>
+			<PanelBody title={ __( 'Image Comparison Settings', 'ib-image-comparison' ) }>
 				<RangeControl
-					label={ __( 'Visibility Ratio', 'ib-image-comparison' ) }
+					label={ __( 'Visibility ratio', 'ib-image-comparison' ) }
 					value={ visibleRatio }
 					onChange={ ( visibleRatio ) =>
 						setAttributes( { visibleRatio } )
@@ -69,7 +69,7 @@ const Inspector = ( props ) => {
 					value={ orientation }
 				/>
 				<SelectControl
-					label={ __( 'Move Handle', 'ib-image-comparison' ) }
+					label={ __( 'Move handle', 'ib-image-comparison' ) }
 					options={ [
 						{ value: 'on_swipe', label: 'On Swipe' },
 						{ value: 'on_click', label: 'On Click' },
@@ -81,111 +81,18 @@ const Inspector = ( props ) => {
 					value={ moveSlider }
 					help={ getMoveHandleHelp() }
 				/>
-			</PanelBody>
-			<PanelBody title={ __( 'Labels', 'ib-image-comparison' ) } initialOpen={ false }>
-				<TextControl
-					label={ __( 'Before Label', 'ib-image-comparison' ) }
-					onChange={ ( beforeLabel ) =>
-						setAttributes( { beforeLabel } )
-					}
-					value={ beforeLabel }
-				/>
-				
-				<TextControl
-					label={ __( 'After Label', 'ib-image-comparison' ) }
-					onChange={ ( afterLabel ) =>
-						setAttributes( { afterLabel } )
-					}
-					value={ afterLabel }
-				/>
-
-				{ 'horizontal' === orientation && (
-				<SelectControl
-					label={ __( 'Position', 'ib-image-comparison' ) }
-					options={ [
-						{ label: __('Top', 'ib-image-comparison'), value: 'top' },
-						{ label: __('Middle', 'ib-image-comparison'), value: 'middle' },
-						{ label: __('Bottom', 'ib-image-comparison'), value: 'bottom' },
-					] }
-					onChange={ ( labelHPosition ) => {
-						setAttributes( { labelHPosition } );
-					} }
-					value={ labelHPosition }
-				/>
-				) }
-
-				{ 'vertical' === orientation && (
-				<SelectControl
-					label={ __( 'Position', 'ib-image-comparison' ) }
-					options={ [
-						{ label: __('Left', 'ib-image-comparison'), value: 'left' },
-						{ label: __('Center', 'ib-image-comparison'), value: 'center' },
-						{ label: __('Right', 'ib-image-comparison'), value: 'right' },
-					] }
-					onChange={ ( labelVPosition ) => {
-						setAttributes( { labelVPosition } );
-					} }
-					value={ labelVPosition }
-				/>
-				) }
-
-				<hr />
-
-				<ColorPickerControl
-					label={ __( 'Text Color', 'ib-image-comparison' ) }
-					value={ labelColor }
-					onChange={ ( labelColor ) =>
-						setAttributes( { labelColor } )
-					}
-					disableAlpha
-					disablePalette
-				/>
-
-				<ColorPickerControl
-					label={ __( 'Background Color', 'ib-image-comparison' ) }
-					value={ labelBgColor }
-					onChange={ ( labelBgColor ) =>
-						setAttributes( { labelBgColor } )
-					}
-					disablePalette
-				/>
-
-				<hr />
-
-				<RangeControl
-					label={ __( 'Border', 'ib-image-comparison' ) }
-					value={ labelBorderWidth }
-					onChange={ ( labelBorderWidth ) =>
-						setAttributes( { labelBorderWidth } )
-					}
-					min={ 0 }
-					step={ 1 }
-					max={ 10 }
-				/>
-
-				<hr />
-
-				<BaseControl
-					label={ __( 'Typography', 'ib-image-comparison' ) }
-				>
-					<FontSizePicker
-						value={ labelFontSize }
-						onChange={ ( labelFontSize ) =>
-							setAttributes( { labelFontSize } )
-						}
-					/>
-				</BaseControl>
-			</PanelBody>
-			<PanelBody title={ __( 'Overlay', 'ib-image-comparison' ) } initialOpen={ false }>
 				<ToggleControl
-					label={ __( 'Show Overlay', 'ib-image-comparison' ) }
+					label={ __( 'Show overlay', 'ib-image-comparison' ) }
 					checked={ showOverlay }
 					onChange={ ( showOverlay ) =>
 						setAttributes( { showOverlay } )
 					}
 				/>
+			</PanelBody>
+			{ showOverlay && 
+			<PanelBody title={ __( 'Overlay Colors', 'ib-image-comparison' ) } initialOpen={ false }>
 				<ColorPickerControl
-					label={ __( 'Overlay Color', 'ib-image-comparison' ) }
+					label={ __( 'Overlay color', 'ib-image-comparison' ) }
 					value={ overlayColor }
 					onChange={ ( overlayColor ) =>
 						setAttributes( { overlayColor } )
@@ -193,7 +100,7 @@ const Inspector = ( props ) => {
 					disablePalette
 				/>
 				<ColorPickerControl
-					label={ __( 'Overlay Hover Color', 'ib-image-comparison' ) }
+					label={ __( 'Overlay hover color', 'ib-image-comparison' ) }
 					value={ overlayHoverColor }
 					onChange={ ( overlayHoverColor ) =>
 						setAttributes( { overlayHoverColor } )
@@ -201,6 +108,103 @@ const Inspector = ( props ) => {
 					disablePalette
 				/>
 			</PanelBody>
+			}
+			{ showOverlay && 
+				<PanelBody title={ __( 'Labels', 'ib-image-comparison' ) } initialOpen={ false }>
+					<TextControl
+						label={ __( 'Before label', 'ib-image-comparison' ) }
+						onChange={ ( beforeLabel ) =>
+							setAttributes( { beforeLabel } )
+						}
+						value={ beforeLabel }
+					/>
+					
+					<TextControl
+						label={ __( 'After label', 'ib-image-comparison' ) }
+						onChange={ ( afterLabel ) =>
+							setAttributes( { afterLabel } )
+						}
+						value={ afterLabel }
+					/>
+
+					{ 'horizontal' === orientation && (
+					<SelectControl
+						label={ __( 'Position', 'ib-image-comparison' ) }
+						options={ [
+							{ label: __('Top', 'ib-image-comparison'), value: 'top' },
+							{ label: __('Middle', 'ib-image-comparison'), value: 'middle' },
+							{ label: __('Bottom', 'ib-image-comparison'), value: 'bottom' },
+						] }
+						onChange={ ( labelHPosition ) => {
+							setAttributes( { labelHPosition } );
+						} }
+						value={ labelHPosition }
+					/>
+					) }
+
+					{ 'vertical' === orientation && (
+					<SelectControl
+						label={ __( 'Position', 'ib-image-comparison' ) }
+						options={ [
+							{ label: __('Left', 'ib-image-comparison'), value: 'left' },
+							{ label: __('Center', 'ib-image-comparison'), value: 'center' },
+							{ label: __('Right', 'ib-image-comparison'), value: 'right' },
+						] }
+						onChange={ ( labelVPosition ) => {
+							setAttributes( { labelVPosition } );
+						} }
+						value={ labelVPosition }
+					/>
+					) }
+
+					<hr />
+
+					<ColorPickerControl
+						label={ __( 'Text color', 'ib-image-comparison' ) }
+						value={ labelColor }
+						onChange={ ( labelColor ) =>
+							setAttributes( { labelColor } )
+						}
+						disableAlpha
+						disablePalette
+					/>
+
+					<ColorPickerControl
+						label={ __( 'Background color', 'ib-image-comparison' ) }
+						value={ labelBgColor }
+						onChange={ ( labelBgColor ) =>
+							setAttributes( { labelBgColor } )
+						}
+						disablePalette
+					/>
+
+					<hr />
+
+					<RangeControl
+						label={ __( 'Border', 'ib-image-comparison' ) }
+						value={ labelBorderWidth }
+						onChange={ ( labelBorderWidth ) =>
+							setAttributes( { labelBorderWidth } )
+						}
+						min={ 0 }
+						step={ 1 }
+						max={ 10 }
+					/>
+
+					<hr />
+
+					<BaseControl
+						label={ __( 'Typography', 'ib-image-comparison' ) }
+					>
+						<FontSizePicker
+							value={ labelFontSize }
+							onChange={ ( labelFontSize ) =>
+								setAttributes( { labelFontSize } )
+							}
+						/>
+					</BaseControl>
+				</PanelBody>
+			}
 		</InspectorControls>
 	);
 };
