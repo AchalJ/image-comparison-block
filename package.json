@@ -1,6 +1,6 @@
 {
 	"name": "image-comparison",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A block to let your visitors compare between two images. After, before, horizontal, and vertical comparison.",
 	"author": "Achal Jain",
 	"license": "GPL-2.0-or-later",
